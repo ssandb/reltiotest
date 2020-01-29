@@ -9668,11 +9668,14 @@
                     "skipInDataAccess": false
                 },
                 {
-                  "label":"Purchase Date",
-                  "name":"purchaseDate",
-                  "type":"Date",
-                  "hidden":false,
-                  "uri":"configuration/relationTypes/affiliatedwith/attributes/purchaseDate"
+                    "label": "Purchase Date",
+                    "name": "purchaseDate",
+                    "type": "Date",
+                    "hidden": false,
+                    "important": false,
+                    "system": false,
+                    "uri": "configuration/relationTypes/affiliatedwith/attributes/purchaseDate",
+                    "skipInDataAccess": false
                 }
             ],
             "direction": "directed"
