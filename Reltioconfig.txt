@@ -6376,24 +6376,6 @@
                     "skipInDataAccess": false
                 },
                 {
-                  "label": "Product",
-                  "name": "Product",
-                  "type": "Reference",
-                  "hidden": false,
-                  "relationshipLabelPattern": "{Status}",
-                  "uri": "configuration/entityTypes/Contact/attributes/Product",
-                  "referencedAttributeURIs": [
-                    "configuration/entityTypes/Product/attributes/Name",
-                    "configuration/entityTypes/Product/attributes/SKU",
-                    "configuration/entityTypes/Product/attributes/productID",
-                    "configuration/entityTypes/Product/attributes/productProperties",
-                    "configuration/relationTypes/ContactProduct/attributes/Status",
-                    "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
-                  ],
-                  "referencedEntityTypeURI": "configuration/entityTypes/Product",
-                  "relationshipTypeURI": "configuration/relationTypes/ContactProduct"
-                  },
-                {
                     "label": "entityURI",
                     "name": "entityURI",
                     "description": "entityURI",
@@ -9699,29 +9681,28 @@
             "direction": "directed"
         },
         {
-            "uri":"configuration/reationTypes/ContractProduct",
-            "label":"Product for Contract",
-            "description":"Product for Contract",
-            "typeColor":"#AA3A44",
-            "startObject":{
-                "uri": "configuration/relationTypes/ContactProduct/startObject",
-                "directionalContext": [
-                    {
-                        "uri":
-"configuration/relationTypes/ContactProduct/startObject/directionalContext",
-                    "labelPattern": "has Product"
-                    }
-                ],
-                "objectTypeURI": "configuration/entityTypes/Contact"
-            },
-            "endObject": {
-                "uri": "configuration/relationTypes/ContactProduct/endObject",
-                "directionalContext": [
-                        {
-                            "uri":
-"configuration/relationTypes/ContactProduct/endObject/directionalContext",
-                            "labelPattern": "has Contact"
-            }
+          "uri": "configuration/relationTypes/ContactProduct",
+          "label": "Product for Contact",
+          "description": "Product for Contact",
+          "typeColor": "#AA3A44",
+          "startObject": {"uri": "configuration/relationTypes/ContactProduct/startObject",
+          "directionalContext": [
+              {
+              "uri":
+              "configuration/relationTypes/ContactProduct/startObject/directionalContext",
+              "labelPattern": "has Product"
+              }
+          ],
+          "objectTypeURI": "configuration/entityTypes/Contact"
+      },
+      "endObject": {
+          "uri": "configuration/relationTypes/ContactProduct/endObject",
+          "directionalContext": [
+            {
+              "uri":
+            "configuration/relationTypes/ContactProduct/endObject/directionalContext",
+              "labelPattern": "has Contact"
+              }
           ],
           "objectTypeURI": "configuration/entityTypes/Product"
       },
@@ -9731,21 +9712,20 @@
               "name": "Status",
               "type": "String",
               "hidden": false,
-"uri": "configuration/relationTypes/ContactProduct/attributes/Status"
-            },
-            {
+              "uri": "configuration/relationTypes/ContactProduct/attributes/Status"
+          },
+          {
               "label": "Purchase Date",
               "name": "purchaseDate",
               "type": "Date",
               "hidden": false,
               "uri":
-"configuration/relationTypes/ContactProduct/attributes/purchaseDate"
-          }
-      ],
-      "direction": "directed"
+           "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
+              }
+        ],
+        "direction": "directed"
+}
 
-          
-        }
     ],
     "interactionTypes": [
         {
