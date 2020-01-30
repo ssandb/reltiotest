@@ -9679,6 +9679,54 @@
                 }
             ],
             "direction": "directed"
+        },
+        {
+            "uri":"configuration/reationTypes/ContractProduct",
+            "label":"Product for Contract",
+            "description":"Product for Contract",
+            "typeColor":"#AA3A44",
+            "startObject":{
+                "uri": "configuration/relationTypes/ContactProduct/startObject",
+                "directionalContext": [
+                    {
+                        "uri":
+"configuration/relationTypes/ContactProduct/startObject/directionalContext",
+                    "labelPattern": "has Product"
+                    }
+                ],
+                "objectTypeURI": "configuration/entityTypes/Contact"
+            },
+            "endObject": {
+                "uri": "configuration/relationTypes/ContactProduct/endObject",
+                "directionalContext": [
+                        {
+                            "uri":
+"configuration/relationTypes/ContactProduct/endObject/directionalContext",
+                            "labelPattern": "has Contact"
+            }
+          ],
+          "objectTypeURI": "configuration/entityTypes/Product"
+      },
+      "attributes": [
+          {
+              "label": "Product Status",
+              "name": "Status",
+              "type": "String",
+              "hidden": false,
+"uri": "configuration/relationTypes/ContactProduct/attributes/Status"
+            },
+            {
+              "label": "Purchase Date",
+              "name": "purchaseDate",
+              "type": "Date",
+              "hidden": false,
+              "uri":
+"configuration/relationTypes/ContactProduct/attributes/purchaseDate"
+          }
+      ],
+      "direction": "directed"
+
+          
         }
     ],
     "interactionTypes": [
