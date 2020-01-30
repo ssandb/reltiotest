@@ -1,7 +1,7 @@
 {
     "uri": "configuration",
     "description": "V3.0 2018-04-11 (AP) add nested attribute Location",
-    "schemaVersion": "1.12",
+    "schemaVersion": "1.1",
     "sources": [
         {
             "uri": "configuration/sources/DnB",
@@ -26,6 +26,13 @@
             "label": "Finance",
             "icon": "images/source/source_s.png",
             "abbreviation": "Finance"
+        },
+        {
+            "uri":"configuration/sources/CRM",
+            "label":"CRM",
+            "icon":"images/source/reltio.png",
+            "abbreviation":"CRM"
+          
         }
     ],
     "label": "101 Beginners start configuration",
@@ -8634,20 +8641,22 @@
                     "name": "Product",
                     "type": "Reference",
                     "hidden": false,
+                    "important": false,
+                    "system": false,
                     "relationshipLabelPattern": "{Status}",
                     "uri": "configuration/entityTypes/Contact/attributes/Product",
                     "referencedAttributeURIs": [
-                      "configuration/entityTypes/Product/attributes/Name",
-                      "configuration/entityTypes/Product/attributes/SKU",
-                      "configuration/entityTypes/Product/attributes/productID",
-                      "configuration/entityTypes/Product/attributes/productProperties",
-                      "configuration/relationTypes/ContactProduct/attributes/Status",
-                      "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
+                        "configuration/entityTypes/Product/attributes/Name",
+                        "configuration/entityTypes/Product/attributes/SKU",
+                        "configuration/entityTypes/Product/attributes/productID",
+                        "configuration/entityTypes/Product/attributes/productProperties",
+                        "configuration/relationTypes/ContactProduct/attributes/Status",
+                        "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
                     ],
                     "referencedEntityTypeURI": "configuration/entityTypes/Product",
-                    "relationshipTypeURI": "configuration/relationTypes/ContactProduct"
-                  }
-                
+                    "relationshipTypeURI": "configuration/relationTypes/ContactProduct",
+                    "skipInDataAccess": false
+                }
             ],
             "geoLocationAttributes": [
                 {
@@ -9700,51 +9709,55 @@
             "direction": "directed"
         },
         {
-          "uri": "configuration/relationTypes/ContactProduct",
-          "label": "Product for Contact",
-          "description": "Product for Contact",
-          "typeColor": "#AA3A44",
-          "startObject": {"uri": "configuration/relationTypes/ContactProduct/startObject",
-          "directionalContext": [
-              {
-              "uri":
-              "configuration/relationTypes/ContactProduct/startObject/directionalContext",
-              "labelPattern": "has Product"
-              }
-          ],
-          "objectTypeURI": "configuration/entityTypes/Contact"
-      },
-      "endObject": {
-          "uri": "configuration/relationTypes/ContactProduct/endObject",
-          "directionalContext": [
-            {
-              "uri":
-            "configuration/relationTypes/ContactProduct/endObject/directionalContext",
-              "labelPattern": "has Contact"
-              }
-          ],
-          "objectTypeURI": "configuration/entityTypes/Product"
-      },
-      "attributes": [
-          {
-              "label": "Product Status",
-              "name": "Status",
-              "type": "String",
-              "hidden": false,
-              "uri": "configuration/relationTypes/ContactProduct/attributes/Status"
-          },
-          {
-              "label": "Purchase Date",
-              "name": "purchaseDate",
-              "type": "Date",
-              "hidden": false,
-              "uri":
-           "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
-              }
-        ],
-        "direction": "directed"
-}
-
+            "uri": "configuration/relationTypes/ContactProduct",
+            "label": "Product for Contact",
+            "description": "Product for Contact",
+            "typeColor": "#AA3A44",
+            "startObject": {
+                "uri": "configuration/relationTypes/ContactProduct/startObject",
+                "directionalContext": [
+                    {
+                        "uri": "configuration/relationTypes/ContactProduct/startObject/directionalContext",
+                        "labelPattern": "has Product"
+                    }
+                ],
+                "objectTypeURI": "configuration/entityTypes/Contact"
+            },
+            "endObject": {
+                "uri": "configuration/relationTypes/ContactProduct/endObject",
+                "directionalContext": [
+                    {
+                        "uri": "configuration/relationTypes/ContactProduct/endObject/directionalContext",
+                        "labelPattern": "has Contact"
+                    }
+                ],
+                "objectTypeURI": "configuration/entityTypes/Product"
+            },
+            "implicit": false,
+            "attributes": [
+                {
+                    "label": "Product Status",
+                    "name": "Status",
+                    "type": "String",
+                    "hidden": false,
+                    "important": false,
+                    "system": false,
+                    "uri": "configuration/relationTypes/ContactProduct/attributes/Status",
+                    "skipInDataAccess": false
+                },
+                {
+                    "label": "Purchase Date",
+                    "name": "purchaseDate",
+                    "type": "Date",
+                    "hidden": false,
+                    "important": false,
+                    "system": false,
+                    "uri": "configuration/relationTypes/ContactProduct/attributes/purchaseDate",
+                    "skipInDataAccess": false
+                }
+            ],
+            "direction": "directed"
+        }
     ],
     "interactionTypes": [
         {
