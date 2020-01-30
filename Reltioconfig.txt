@@ -6341,6 +6341,24 @@
                     "skipInDataAccess": false
                 },
                 {
+                  "label": "Product",
+                  "name": "Product",
+                  "type": "Reference",
+                  "hidden": false,
+                  "relationshipLabelPattern": "{Status}",
+                  "uri": "configuration/entityTypes/Contact/attributes/Product",
+                  "referencedAttributeURIs": [
+                    "configuration/entityTypes/Product/attributes/Name",
+                    "configuration/entityTypes/Product/attributes/SKU",
+                    "configuration/entityTypes/Product/attributes/productID",
+                    "configuration/entityTypes/Product/attributes/productProperties",
+                    "configuration/relationTypes/ContactProduct/attributes/Status",
+                    "configuration/relationTypes/ContactProduct/attributes/purchaseDate"
+                  ],
+                  "referencedEntityTypeURI": "configuration/entityTypes/Product",
+                  "relationshipTypeURI": "configuration/relationTypes/ContactProduct"
+                  },
+                {
                     "hidden": false,
                     "important": false,
                     "system": false,
