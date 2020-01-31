@@ -1,7 +1,7 @@
 {
     "uri": "configuration",
     "description": "V3.0 2018-04-11 (AP) add nested attribute Location",
-    "schemaVersion": "1.1",
+    "schemaVersion": "1.12",
     "sources": [
         {
             "uri": "configuration/sources/DnB",
@@ -22,17 +22,16 @@
             "abbreviation": "ReltioCleanser"
         },
         {
+            "uri": "configuration/sources/CRM",
+            "label": "CRM",
+            "icon": "images/source/reltio.png",
+            "abbreviation": "CRM"
+        },
+        {
             "uri": "configuration/sources/Finance",
             "label": "Finance",
             "icon": "images/source/source_s.png",
             "abbreviation": "Finance"
-        },
-        {
-            "uri":"configuration/sources/CRM",
-            "label":"CRM",
-            "icon":"images/source/reltio.png",
-            "abbreviation":"CRM"
-          
         }
     ],
     "label": "101 Beginners start configuration",
